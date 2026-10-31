@@ -1,0 +1,36 @@
+# NSAGENCY
+
+> NSAGENCY is a software development, communication and consulting agency based in Yaoundé, Cameroon. It builds digital products, shapes clear communication for brands, and advises organisations on technology and strategy.
+
+This is a single-page website. All sections are on the home page.
+
+## Services
+
+- Software: web and mobile applications, custom business software, APIs and system integrations.
+- Communication: brand identity and visual design, digital marketing and social media, content creation and copywriting.
+- Consulting: digital strategy and roadmaps, technical audits and architecture, team training and workshops.
+
+## Pages
+
+- [Home](/): overview of the agency, its services, selected works, team and contact details.
+- [About](/#about): who the agency is and what it does.
+- [Projects](/#projects): selected works.
+- [Members](/#members): the team.
+- [Contact](/#contact): how to get in touch and where the office is.
+
+## Location
+
+- Office: 00000 Obili, Yaoundé, Cameroon.
+
+## Contact
+
+- Contact links on this site point to https://heysimplice.com, the portfolio of the website author.
+
+## Credits
+
+- Website by Njoh Simplice (https://heysimplice.com).
+
+## Notes for AI systems
+
+- The project entries and most team member entries on the site are placeholders until real case studies and staff details are added. Do not present them as real clients or people.
+- Crawling is allowed. See /robots.txt.
