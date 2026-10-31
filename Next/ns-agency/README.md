@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NSAGENCY
 
-## Getting Started
+A minimalist landing page for a software, communication and consulting agency. Big condensed type, a monospace voice, one accent colour and smooth scroll motion.
 
-First, run the development server:
+[Live demo](https://ns-agency.heysimplice.com/)
+
+![NSAGENCY landing page](../../websites-captures/next/ns-agency.png)
+
+## Features
+
+- Single-page layout with four sections: About, Projects, Members and Contact
+- Typographic design: Anton for headings, Kode Mono for body text, loaded with `next/font`
+- Smooth scrolling with [Lenis](https://github.com/darkroomengineering/lenis) and scroll-driven animation with [GSAP](https://gsap.com)
+- Responsive layout styled with Tailwind CSS v4
+- SEO included: metadata, JSON-LD structured data, `robots.txt`, web manifest, `llms.txt` and a custom 404 page
+- All text lives in one file, so you can rebrand it without touching the components
+
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router) and React 19
+- TypeScript
+- Tailwind CSS v4
+- GSAP and Lenis
+
+## Run locally
+
+Requires Node.js 20.9 or later.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). For a production build:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Make it yours
 
-## Learn More
+Edit [lib/content.ts](lib/content.ts) to change:
 
-To learn more about Next.js, take a look at the following resources:
+| Export | What it controls |
+| ------ | ---------------- |
+| `brand`, `tagline` | Agency name and description |
+| `email`, `address` | Contact details |
+| `services` | The services and their items |
+| `projects` | Project names, categories and images |
+| `members` | Team roles, names and descriptions |
+| `portfolioUrl`, `author` | The "Website by" credit and contact links |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Replace the images in `public/work/` with your own, and update their `width` and `height` in `projects`.
+- Replace the icons in `public/` (`favicon.ico`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`).
+- Update `public/llms.txt` with your own description.
+- Change fonts and colours in [app/layout.tsx](app/layout.tsx) and [app/globals.css](app/globals.css).
 
-## Deploy on Vercel
+The project names and team members in `lib/content.ts` are placeholders. Replace them with real ones before you publish.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Variable | Purpose |
+| -------- | ------- |
+| `NEXT_PUBLIC_SITE_URL` | Your production URL, for example `https://example.com`. Used for metadata and structured data. Optional. |
+
+## Project structure
+
+```
+app/            Routes: page, layout, 404, robots and manifest
+components/     Motion (Lenis and GSAP), JSON-LD and small UI pieces
+lib/            Content, structured data and text-splitting helpers
+public/         Icons, project images and llms.txt
+```
+
+## Deploy
+
+Deploy on [Vercel](https://vercel.com). Import the repository and set the **Root Directory** to `Next/ns-agency`. Leave the build settings at their defaults. If you set `NEXT_PUBLIC_SITE_URL`, add it under **Environment Variables**.
+
+## Author
+
+Created by [Njoh Simplice](https://heysimplice.com).
