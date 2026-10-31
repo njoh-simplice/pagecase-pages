@@ -8,7 +8,7 @@ Every page is a self-contained project: copy a folder, run it, make it yours.
 
 | Preview | Project | Stack | Concept |
 | ------- | ------- | ----- | ------- |
-| <a href="https://ns-agency.heysimplice.com/"><img src="websites-captures/next/ns-agency.png" alt="NSAGENCY landing page" width="320"></a> | [**NSAGENCY**](Next/ns-agency) · [Live](https://ns-agency.heysimplice.com/) | Next.js, Tailwind CSS, GSAP, Lenis | A bold, typographic landing page for a digital agency based in Yaoundé, Cameroon |
+| <a href="https://ns-agency.heysimplice.com/"><img src="websites-captures/next/ns-agency-readme.png" alt="NSAGENCY landing page" width="320"></a> | [**NSAGENCY**](Next/ns-agency) · [Live](https://ns-agency.heysimplice.com/) | Next.js, Tailwind CSS, GSAP, Lenis | A bold, typographic landing page for a digital agency based in Yaoundé, Cameroon |
 
 More pages are on the way in `Html/`, `React/` and `Next/`.
 

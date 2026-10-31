@@ -4,7 +4,7 @@ A minimalist landing page for a software, communication and consulting agency. B
 
 [Live demo](https://ns-agency.heysimplice.com/)
 
-![NSAGENCY landing page](../../websites-captures/next/ns-agency.png)
+![NSAGENCY landing page](../../websites-captures/next/ns-agency-readme.png)
 
 ## Features
 
