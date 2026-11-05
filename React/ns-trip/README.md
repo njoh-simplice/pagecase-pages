@@ -52,11 +52,11 @@ All copy lives in `src/utils/content.js`. Facts about Cameroon are real; the ns-
 
 ## Logo and icons
 
-The logo is an olive square (`#566246`) on paper (`#f5f6f3`). Every file below uses that same shape.
+The navbar and footer use a [Logoipsum](https://logoipsum.com) placeholder logo. Replace `src/assets/images/logoipsum.svg` with your own. The favicon and app icons keep the ns-trip mark: an olive square (`#566246`) on paper (`#f5f6f3`).
 
 | File | Size | Used by |
 | ---- | ---- | ------- |
-| `src/assets/images/ns-trip-logo.svg` | vector | Navbar and footer |
+| `src/assets/images/logoipsum.svg` | vector | Navbar and footer |
 | `public/favicon.ico` | 16, 32, 48 | Browser tab (fallback) |
 | `public/favicon.svg` | vector | Browser tab |
 | `public/apple-touch-icon.png` | 180 × 180 | iOS home screen |

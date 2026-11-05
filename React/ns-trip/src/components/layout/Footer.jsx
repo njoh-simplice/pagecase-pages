@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import logo from '../../assets/images/ns-trip-logo.svg'
+import logo from '../../assets/images/logoipsum.svg'
 import { footer, site } from '../../utils/content'
 import Button from '../ui/Button'
 import FooterScene from './FooterScene'
@@ -16,9 +16,8 @@ export default function Footer() {
       <div className="frame relative pt-[4.75rem]">
         <div className="grid gap-x-6 gap-y-12 lg:grid-cols-[1fr_auto]">
           <div className="flex flex-col items-start gap-8">
-            <a href="/" className="flex items-center gap-3" aria-label="ns-trip home">
-              <img src={logo} alt="" className="h-10 w-auto rounded-[4px]" />
-              <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em]">ns-trip</span>
+            <a href="/" className="flex items-center" aria-label="ns-trip home">
+              <img src={logo} alt="" className="aspect-[123/40] h-9 w-auto brightness-0 invert" />
             </a>
             <p data-reveal="heading" className="max-w-sm text-h5 text-white/85">
               {footer.tagline}
