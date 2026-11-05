@@ -6,10 +6,10 @@ Every page is a self-contained project: copy a folder, run it, make it yours.
 
 ## Projects
 
-| Preview | Project | Stack | Concept |
-| ------- | ------- | ----- | ------- |
-| <a href="https://ns-agency.heysimplice.com/"><img src="websites-captures/next/ns-agency-readme.png" alt="NSAGENCY landing page" width="320"></a> | [**NSAGENCY**](Next/ns-agency) · [Live](https://ns-agency.heysimplice.com/) | Next.js, Tailwind CSS, GSAP, Lenis | A bold, typographic landing page for a digital agency based in Yaoundé, Cameroon |
-| <a href="https://ns-trip.heysimplice.com"><img src="websites-captures/react/ns-trip-readme.png" alt="ns-trip landing page" width="320"></a> | [**ns-trip**](React/ns-trip) · [Live](https://ns-trip.heysimplice.com) | React 19, Vite, Tailwind CSS, GSAP, Lenis | A tourism landing page for Cameroon, with a drawn topographic map and scroll-driven storytelling |
+| Preview                                                                                                                                          | Project                                                                     | Stack                                     | Concept                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| <a href="https://ns-agency.heysimplice.com/"><img src="websites-captures/next/ns-agency-readme.png" alt="NSAGENCY landing page" width="320"></a> | [**NSAGENCY**](Next/ns-agency) · [Live](https://ns-agency.heysimplice.com/) | Next.js, Tailwind CSS, GSAP, Lenis        | A bold, typographic landing page for a digital agency based in Yaoundé, Cameroon                 |
+| <a href="https://ns-trip.heysimplice.com"><img src="websites-captures/react/ns-trip-readme.png" alt="ns-trip landing page" width="320"></a>      | [**NSTRIP**](React/ns-trip) · [Live](https://ns-trip.heysimplice.com)       | React 19, Vite, Tailwind CSS, GSAP, Lenis | A tourism landing page for Cameroon, with a drawn topographic map and scroll-driven storytelling |
 
 More pages are on the way in `Html/`, `React/` and `Next/`.
 
@@ -49,11 +49,11 @@ python -m http.server 8000
 
 Deploy each page as its own project on [Vercel](https://vercel.com). Import this repository once per page and set the **Root Directory** to that page's folder:
 
-| Site | Root Directory | Framework preset |
-| ---- | -------------- | ---------------- |
-| Next.js page | `Next/<project>` | Next.js |
-| React page | `React/<project>` | Vite |
-| HTML page | `Html/<project>` | Other, no build step |
+| Site         | Root Directory    | Framework preset     |
+| ------------ | ----------------- | -------------------- |
+| Next.js page | `Next/<project>`  | Next.js              |
+| React page   | `React/<project>` | Vite                 |
+| HTML page    | `Html/<project>`  | Other, no build step |
 
 Leave the build command and output directory at their defaults.
 
