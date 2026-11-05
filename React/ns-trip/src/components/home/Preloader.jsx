@@ -4,7 +4,7 @@ import TopoCanvas from './TopoCanvas'
 export const COLLAPSED_TOP = 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'
 export const COLLAPSED_BOTTOM = 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
 
-// The logo is a mask over a currentColor block, so it takes the lime text colour.
+// The logo is a mask over a white block, so it shows as a white logo on the lime square.
 const logoMask = {
   maskImage: `url(${logo})`,
   WebkitMaskImage: `url(${logo})`,
@@ -16,8 +16,8 @@ const logoMask = {
   WebkitMaskSize: 'contain',
 }
 
-// Navy intro screen: the contour map wipes up from the bottom, the lime logo
-// wipes in from the top, then the whole screen wipes away upwards to reveal
+// Navy intro screen: the contour map wipes up from the bottom, the lime square
+// with the white logo wipes in from the top, then the whole screen wipes away upwards to reveal
 // the hero. Animated by the Hero timeline.
 export default function Preloader() {
   return (
@@ -28,8 +28,8 @@ export default function Preloader() {
         </div>
       </div>
       <div className="absolute inset-0 grid place-items-center">
-        <div data-preloader-logo className="w-[11rem] text-lime lg:w-[17rem]" style={{ clipPath: COLLAPSED_TOP }}>
-          <span className="block aspect-[123/40] w-full bg-current" style={logoMask} />
+        <div data-preloader-logo className="grid aspect-square w-[8rem] place-items-center bg-lime lg:w-[12rem]" style={{ clipPath: COLLAPSED_TOP }}>
+          <span className="block aspect-[123/40] w-[68%] bg-white" style={logoMask} />
         </div>
       </div>
     </div>
