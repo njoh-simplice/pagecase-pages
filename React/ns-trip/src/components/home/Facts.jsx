@@ -6,7 +6,7 @@ const DELAY = 2500
 const SPEED = 600
 const VISIBLE = 5
 
-// Distance from the active row, wrapped so the list loops (-2 .. 2 for 5 rows).
+// Distance from the active column, wrapped so the list loops (-2 .. 2 for 5 columns).
 const offsetOf = (i, active, n) => {
   let d = (i - active) % n
   if (d > n / 2) d -= n
@@ -15,13 +15,13 @@ const offsetOf = (i, active, n) => {
 }
 
 const LOOK = {
-  0: { opacity: 1, x: 0 },
-  1: { opacity: 0.5, x: 32 },
-  2: { opacity: 0.25, x: 64 },
+  0: { opacity: 1, y: 0 },
+  1: { opacity: 0.5, y: 16 },
+  2: { opacity: 0.25, y: 32 },
 }
 
-// Vertical, looping fact slider: the centred row is fully lit (number in lime),
-// neighbours fade and drift right. Autoplays; arrows and clicks jump rows.
+// Horizontal, looping fact slider: the centred column is fully lit (number in
+// lime), neighbours fade and drift down. Autoplays; arrows and clicks jump columns.
 export default function Facts() {
   const { items } = facts
   const n = items.length
@@ -52,58 +52,56 @@ export default function Facts() {
 
   return (
     <section className="overflow-hidden bg-navy text-white">
-      <div className="frame grid gap-12 py-[6.6rem] lg:grid-cols-[40%_1fr]">
+      <div className="frame flex flex-col gap-8 pt-[6.6rem] lg:flex-row lg:items-end lg:justify-between">
         <div data-reveal-component>
           <p data-reveal="paragraph" className="max-w-[34rem] origin-left text-h4">
             {facts.text}
           </p>
         </div>
 
-        <div className="relative pr-14" style={{ '--row': 'calc(6rem + 3.2vw)' }}>
-          <ul className="relative h-[calc(var(--row)*5)]" aria-live="polite">
-            {items.map((item, i) => {
-              const o = offsets[i]
-              const look = LOOK[Math.abs(o)] ?? { opacity: 0, x: 64 }
-              const isActive = o === 0
-              return (
-                <li
-                  key={item.value}
-                  className="absolute inset-x-0 top-1/2 flex h-(--row) cursor-pointer items-center gap-[clamp(1.5rem,2.8vw,2.5rem)]"
-                  style={{
-                    opacity: Math.abs(o) <= Math.floor(VISIBLE / 2) ? look.opacity : 0,
-                    transform: `translate(${look.x}px, calc(-50% + ${o} * var(--row)))`,
-                    transition: jumps[i] ? 'none' : `opacity ${SPEED}ms ease, transform ${SPEED}ms ease`,
-                  }}
-                  onClick={() => go(i)}
-                  aria-current={isActive}
-                >
-                  <span className={`shrink-0 text-h1 transition-colors duration-500 ${isActive ? 'text-lime' : ''}`}>{item.value}</span>
-                  <span className="max-w-[16ch] text-h4">{item.label}</span>
-                </li>
-              )
-            })}
-          </ul>
-
-          <div className="absolute right-0 top-1/2 flex -translate-y-1/2 flex-col gap-2">
-            <button
-              type="button"
-              onClick={() => go(active - 1)}
-              aria-label="Previous fact"
-              className="grid size-12 place-items-center rounded-[4px] bg-white/20 transition-colors hover:bg-white/30"
-            >
-              <Icon name="arrowUp" className="size-5" strokeWidth={2} />
-            </button>
-            <button
-              type="button"
-              onClick={() => go(active + 1)}
-              aria-label="Next fact"
-              className="grid size-12 place-items-center rounded-[4px] bg-white/20 transition-colors hover:bg-white/30"
-            >
-              <Icon name="arrowDown" className="size-5" strokeWidth={2} />
-            </button>
-          </div>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => go(active - 1)}
+            aria-label="Previous fact"
+            className="grid size-12 place-items-center rounded-[4px] bg-white/20 transition-colors hover:bg-white/30"
+          >
+            <Icon name="arrowLeft" className="size-5" strokeWidth={2} />
+          </button>
+          <button
+            type="button"
+            onClick={() => go(active + 1)}
+            aria-label="Next fact"
+            className="grid size-12 place-items-center rounded-[4px] bg-white/20 transition-colors hover:bg-white/30"
+          >
+            <Icon name="arrowRight" className="size-5" strokeWidth={2} />
+          </button>
         </div>
       </div>
+
+      <ul className="relative mt-12 h-[clamp(12rem,18vw,15rem)] pb-[6.6rem] box-content" style={{ '--col': 'clamp(13rem, 24vw, 22rem)' }} aria-live="polite">
+        {items.map((item, i) => {
+          const o = offsets[i]
+          const look = LOOK[Math.abs(o)] ?? { opacity: 0, y: 32 }
+          const isActive = o === 0
+          return (
+            <li
+              key={item.value}
+              className="absolute left-1/2 top-0 flex h-[clamp(12rem,18vw,15rem)] w-(--col) cursor-pointer flex-col items-center justify-center gap-4 text-center"
+              style={{
+                opacity: Math.abs(o) <= Math.floor(VISIBLE / 2) ? look.opacity : 0,
+                transform: `translate(calc(-50% + ${o} * var(--col)), ${look.y}px)`,
+                transition: jumps[i] ? 'none' : `opacity ${SPEED}ms ease, transform ${SPEED}ms ease`,
+              }}
+              onClick={() => go(i)}
+              aria-current={isActive}
+            >
+              <span className={`text-h1 transition-colors duration-500 ${isActive ? 'text-lime' : ''}`}>{item.value}</span>
+              <span className="max-w-[16ch] text-h4">{item.label}</span>
+            </li>
+          )
+        })}
+      </ul>
     </section>
   )
 }

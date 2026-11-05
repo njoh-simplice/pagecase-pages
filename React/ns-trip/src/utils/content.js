@@ -86,7 +86,7 @@ export const steps = [
 ]
 
 export const about = {
-  title: 'The ns-trip way',
+  title: 'The local way',
   text: 'ns-trip brings planning, transport, stays and local guides together in one trip. Tell us how you like to travel and we build the route around you, then stay with you on the ground from arrival to departure.',
   cta: 'Plan your trip',
   reel: 'Brand film',

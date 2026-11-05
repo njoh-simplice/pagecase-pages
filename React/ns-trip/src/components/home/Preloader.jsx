@@ -1,7 +1,20 @@
+import logo from '../../assets/images/logoipsum.svg'
 import TopoCanvas from './TopoCanvas'
 
 export const COLLAPSED_TOP = 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)'
 export const COLLAPSED_BOTTOM = 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)'
+
+// The logo is a mask over a currentColor block, so it takes the lime text colour.
+const logoMask = {
+  maskImage: `url(${logo})`,
+  WebkitMaskImage: `url(${logo})`,
+  maskRepeat: 'no-repeat',
+  WebkitMaskRepeat: 'no-repeat',
+  maskPosition: 'center',
+  WebkitMaskPosition: 'center',
+  maskSize: 'contain',
+  WebkitMaskSize: 'contain',
+}
 
 // Navy intro screen: the contour map wipes up from the bottom, the lime logo
 // wipes in from the top, then the whole screen wipes away upwards to reveal
@@ -15,9 +28,8 @@ export default function Preloader() {
         </div>
       </div>
       <div className="absolute inset-0 grid place-items-center">
-        <div data-preloader-logo className="flex w-[7.5rem] flex-col items-center gap-3 text-lime lg:w-[11.875rem]" style={{ clipPath: COLLAPSED_TOP }}>
-          <span className="aspect-square w-[34%] bg-current" />
-          <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em] lg:text-[2.6rem]">ns-trip</span>
+        <div data-preloader-logo className="w-[11rem] text-lime lg:w-[17rem]" style={{ clipPath: COLLAPSED_TOP }}>
+          <span className="block aspect-[123/40] w-full bg-current" style={logoMask} />
         </div>
       </div>
     </div>
