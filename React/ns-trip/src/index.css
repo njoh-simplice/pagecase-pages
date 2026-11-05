@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "@fontsource-variable/instrument-sans";
+
+/* Fluid scale: every size grows linearly from a 320px to a 1600px viewport. */
+@theme {
+  --color-paper: #f5f6f3;
+  --color-accent: #ff5c29;
+  --color-olive: #566246;
+  --color-mist: #e8ebea;
+  --color-ink: #0a0a0a;
+  --color-sage: #dfe3d8;
+  --color-navy: #002642;
+  --color-sky: #b2dfff;
+  --color-ocean: #0090f8;
+  --color-lime: #c3ff44;
+  --color-line: #d9d9d9;
+  --color-light-200: #f7f7f7;
+  --color-light-300: #f0f0f0;
+
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  --text-h1: clamp(2.5rem, 1.8125rem + 3.4375vw, 5.25rem);
+  --text-h1--line-height: 1;
+  --text-h1--letter-spacing: -0.03em;
+  --text-h2: clamp(2rem, 1.5rem + 2.5vw, 4rem);
+  --text-h2--line-height: 1;
+  --text-h2--letter-spacing: -0.03em;
+  --text-h3: clamp(1.5rem, 1.125rem + 1.875vw, 3rem);
+  --text-h3--line-height: 1.15;
+  --text-h3--letter-spacing: -0.02em;
+  --text-h4: clamp(1.25rem, 1.0625rem + 0.9375vw, 2rem);
+  --text-h4--line-height: 1.15;
+  --text-h4--letter-spacing: -0.02em;
+  --text-h5: clamp(1.125rem, 1.03125rem + 0.46875vw, 1.5rem);
+  --text-h5--line-height: 1.3;
+  --text-h5--letter-spacing: -0.02em;
+  --text-h6: clamp(0.875rem, 0.84375rem + 0.15625vw, 1rem);
+  --text-h6--line-height: 1;
+  --text-h6--letter-spacing: 0.02em;
+  --text-main: clamp(1rem, 0.96875rem + 0.15625vw, 1.125rem);
+  --text-main--line-height: 1.4;
+  --text-main--letter-spacing: -0.01em;
+  --text-small: clamp(0.875rem, 0.84375rem + 0.15625vw, 1rem);
+  --text-small--line-height: 1.4;
+  --text-small--letter-spacing: -0.01em;
+
+  --spacing-margin: clamp(1rem, 0.5rem + 2.5vw, 3rem);
+
+  --breakpoint-lg: 62rem;
+
+  --ease-osmo: cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+/* Page container: fluid side margin, 1600px max. */
+@utility frame {
+  margin-inline: auto;
+  width: calc(100% - var(--spacing-margin) * 2);
+  max-width: 1600px;
+}
+
+@layer base {
+  html {
+    scrollbar-width: none;
+  }
+  body {
+    @apply bg-paper font-sans text-main font-medium text-ink antialiased;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Button label: each character slides up to reveal a text-shadow copy. */
+[data-chars] {
+  position: relative;
+  overflow: hidden;
+  padding-block: 0.2em;
+  margin-block: -0.2em;
+}
+[data-chars] span {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0 1.5em currentColor;
+  transform: translateY(0) rotate(0.001deg);
+  transition: transform 0.6s var(--ease-osmo);
+}
+.group:hover [data-chars] span,
+.group:focus-visible [data-chars] span {
+  transform: translateY(-1.5em) rotate(0.001deg);
+}
+
+/* Hover one link, fade its siblings. */
+[data-dim-siblings]:hover > * > a:not(:hover),
+[data-dim-siblings]:hover > a:not(:hover) {
+  opacity: 0.5;
+}
+
+/* Masked lines used by heading reveals. */
+.line-mask {
+  padding-block: 0.15em;
+  margin-block: -0.15em;
+}
+
+/* Hidden until the reveal runs (desktop only, like the reference). */
+@media (min-width: 992px) {
+  [data-reveal-component] [data-reveal] {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal-component] [data-reveal] {
+    opacity: 1 !important;
+  }
+}

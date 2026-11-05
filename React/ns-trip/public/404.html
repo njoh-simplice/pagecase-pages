@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found | TripKam</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#002642" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root {
+        --navy: #002642;
+        --accent: #ff5c29;
+        --lime: #c3ff44;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 24px 16px;
+        background: var(--navy);
+        color: #fff;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-weight: 500;
+      }
+      main {
+        position: relative;
+        width: min(100%, 640px);
+        padding: 56px 32px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+      }
+      .corner {
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background: #fff;
+      }
+      .tl { top: -4px; left: -4px; }
+      .tr { top: -4px; right: -4px; }
+      .bl { bottom: -4px; left: -4px; }
+      .br { bottom: -4px; right: -4px; }
+      .code {
+        margin: 0 auto;
+        color: var(--lime);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 16px 0;
+        font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: -0.03em;
+      }
+      p {
+        margin: 0 auto 32px;
+        max-width: 26rem;
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      a {
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 4px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      <p class="code">Error 404</p>
+      <h1>This trail goes nowhere</h1>
+      <p>The page you are looking for does not exist or has moved. Head back to the start and pick another route.</p>
+      <a href="/">Back to TripKam</a>
+    </main>
+  </body>
+</html>

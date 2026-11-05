@@ -1,0 +1,11 @@
+/* TEAM */
+Design and development: Njoh Simplice
+Site: https://heysimplice.com
+From: Cameroon
+
+/* SITE */
+Last update: 2026/11/05
+Language: English
+Standards: HTML5, CSS3
+Components: React, Vite, Tailwind CSS, GSAP, Lenis
+Photos: Wikimedia Commons contributors (credited in the site footer) and the site author

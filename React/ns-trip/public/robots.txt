@@ -1,0 +1,5 @@
+# TripKam - https://tripkam.heysimplice.com
+User-agent: *
+Allow: /
+
+Sitemap: https://tripkam.heysimplice.com/sitemap.xml

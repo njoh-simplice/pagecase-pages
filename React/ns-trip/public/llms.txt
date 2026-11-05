@@ -1,0 +1,24 @@
+# TripKam
+
+> TripKam is a tours and travel site for Cameroon: guided journeys through mountains, rainforest, savanna and coast, led by local experts. It is a demo website designed and built by Njoh Simplice (https://heysimplice.com). Facts about Cameroon on the site are real; TripKam itself, its itineraries and its claims are sample content.
+
+Cameroon is often called "Africa in miniature" because it packs most of the continent's landscapes into one country: 10 regions from the Sahel to the Atlantic, more than 250 ethnic groups and languages, two official languages (French and English), 402 km of Atlantic coastline, and Mount Cameroon, which rises to 4,040 m.
+
+## Pages
+
+- [Home](https://tripkam.heysimplice.com/): Destinations by landscape and region, featured experiences, sample itineraries, facts about Cameroon and travel notes.
+- [Contact](https://tripkam.heysimplice.com/contact/): Trip enquiry form (name, email, interests, travel dates, group size and message).
+
+## Experiences
+
+- Mount Cameroon (South West): a three-day climb from Buea through farmland and montane forest to the 4,040 m summit. Best season: November to March.
+- Dja Faunal Reserve (South and East): rainforest with forest elephants and primates.
+- Foumban (West): the Sultan's Palace and museum, and the artisans' street of bronze casters and wood carvers in the Bamoun kingdom. Best season: November to February.
+- Kribi and the coast (South): beaches, the Lobé Falls where the river meets the ocean, and fishing villages. Best season: December to February.
+- The north: Waza National Park and the Rhumsiki peaks in the Far North.
+
+## About the site
+
+- [Designer and developer: Njoh Simplice](https://heysimplice.com)
+- Built with React, Vite, Tailwind CSS, GSAP and Lenis.
+- Photo credits are listed in the footer of every page.
