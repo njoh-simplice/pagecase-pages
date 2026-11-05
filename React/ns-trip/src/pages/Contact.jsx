@@ -13,7 +13,7 @@ export default function Contact() {
   useReveal(root)
 
   useEffect(() => {
-    document.title = 'Contact | TripKam'
+    document.title = 'Contact | ns-trip'
   }, [])
 
   return (

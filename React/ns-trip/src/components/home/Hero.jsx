@@ -18,7 +18,7 @@ const FULL = 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
 const REACH = 160
 
 // Tells the navbar to slide in (it lives outside the hero).
-const showNav = () => window.dispatchEvent(new Event('tripkam:nav-in'))
+const showNav = () => window.dispatchEvent(new Event('ns-trip:nav-in'))
 
 export default function Hero() {
   const root = useRef(null)

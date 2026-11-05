@@ -17,7 +17,7 @@ export default function Preloader() {
       <div className="absolute inset-0 grid place-items-center">
         <div data-preloader-logo className="flex w-[7.5rem] flex-col items-center gap-3 text-lime lg:w-[11.875rem]" style={{ clipPath: COLLAPSED_TOP }}>
           <span className="aspect-square w-[34%] bg-current" />
-          <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em] lg:text-[2.6rem]">TripKam</span>
+          <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em] lg:text-[2.6rem]">ns-trip</span>
         </div>
       </div>
     </div>

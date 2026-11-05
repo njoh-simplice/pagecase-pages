@@ -1,8 +1,8 @@
-# TripKam
+# ns-trip
 
-Website for TripKam, a demo tourism company in Cameroon. Two pages: Home and Contact.
+Website for ns-trip, a demo tourism company in Cameroon. Two pages: Home and Contact.
 
-**Live:** https://tripkam.heysimplice.com
+**Live:** https://ns-trip.heysimplice.com
 **Design and development:** [Njoh Simplice](https://heysimplice.com)
 
 **Stack:** React 19, Vite, Tailwind CSS 4, GSAP (ScrollTrigger, SplitText), Lenis
@@ -48,7 +48,7 @@ Design tokens (colours, fluid type scale `text-h1` to `text-small`, page margin)
 
 Place photos are WebP files in `src/assets/images/places/`. Photos from Wikimedia Commons are credited in the footer (`footer.photoCredits` in `content.js`); keep that list in step with the images. The only placeholder left is the "Brand film" video in the About section (`MediaPlaceholder`). The hero artwork is generated: `TopoCanvas.jsx` draws the contour map and `utils/trails.js` holds the route lines.
 
-All copy lives in `src/utils/content.js`. Facts about Cameroon are real; the TripKam claims and itineraries are sample copy to review.
+All copy lives in `src/utils/content.js`. Facts about Cameroon are real; the ns-trip claims and itineraries are sample copy to review.
 
 ## Logo and icons
 
@@ -56,7 +56,7 @@ The logo is an olive square (`#566246`) on paper (`#f5f6f3`). Every file below u
 
 | File | Size | Used by |
 | ---- | ---- | ------- |
-| `src/assets/images/tripkam-logo.svg` | vector | Navbar and footer |
+| `src/assets/images/ns-trip-logo.svg` | vector | Navbar and footer |
 | `public/favicon.ico` | 16, 32, 48 | Browser tab (fallback) |
 | `public/favicon.svg` | vector | Browser tab |
 | `public/apple-touch-icon.png` | 180 × 180 | iOS home screen |
@@ -81,7 +81,7 @@ Files in `public/` are copied to the site root:
 | `_headers` | Security and cache headers (Netlify, Cloudflare Pages) |
 | `.well-known/security.txt` | Where to report security issues |
 
-The site URL (`https://tripkam.heysimplice.com`) appears in the two HTML entries, `robots.txt`, `sitemap.xml`, `llms.txt` and `site.url` in `content.js`. Change it in all of them if the domain changes.
+The site URL (`https://ns-trip.heysimplice.com`) appears in the two HTML entries, `robots.txt`, `sitemap.xml`, `llms.txt` and `site.url` in `content.js`. Change it in all of them if the domain changes.
 
 The contact form shows a thank-you message but does not send anything yet. Connect `handleSubmit` in `src/components/contact/ContactForm.jsx` to a form service before relying on it.
 

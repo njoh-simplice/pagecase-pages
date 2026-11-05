@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import logo from '../../assets/images/tripkam-logo.svg'
+import logo from '../../assets/images/ns-trip-logo.svg'
 import { footer, site } from '../../utils/content'
 import Button from '../ui/Button'
 import FooterScene from './FooterScene'
@@ -16,9 +16,9 @@ export default function Footer() {
       <div className="frame relative pt-[4.75rem]">
         <div className="grid gap-x-6 gap-y-12 lg:grid-cols-[1fr_auto]">
           <div className="flex flex-col items-start gap-8">
-            <a href="/" className="flex items-center gap-3" aria-label="TripKam home">
+            <a href="/" className="flex items-center gap-3" aria-label="ns-trip home">
               <img src={logo} alt="" className="h-10 w-auto rounded-[4px]" />
-              <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em]">TripKam</span>
+              <span className="text-[1.75rem] font-semibold leading-none tracking-[-0.04em]">ns-trip</span>
             </a>
             <p data-reveal="heading" className="max-w-sm text-h5 text-white/85">
               {footer.tagline}
@@ -59,7 +59,7 @@ export default function Footer() {
             , via Wikimedia Commons.
           </p>
           <div className="flex shrink-0 flex-col gap-1 sm:items-end">
-            <p className="text-white">TripKam © {year}. All rights reserved.</p>
+            <p className="text-white">ns-trip © {year}. All rights reserved.</p>
             <p>
               Site by{' '}
               <a href={site.author.url} target="_blank" rel="noopener" className="text-white underline underline-offset-2 transition-opacity hover:opacity-70">

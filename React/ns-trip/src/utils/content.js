@@ -1,4 +1,4 @@
-// All page copy lives here. Facts about Cameroon are real; TripKam-specific
+// All page copy lives here. Facts about Cameroon are real; ns-trip-specific
 // claims and itineraries are sample copy to review before launch.
 
 import mountCameroon from '../assets/images/places/mount-cameroon.webp'
@@ -13,8 +13,8 @@ import ctaRhumsiki from '../assets/images/places/cta-rhumsiki.webp'
 import aboutKilumIjim from '../assets/images/places/about-kilum-ijim.webp'
 
 export const site = {
-  name: 'TripKam',
-  url: 'https://tripkam.heysimplice.com',
+  name: 'ns-trip',
+  url: 'https://ns-trip.heysimplice.com',
   author: { name: 'Njoh Simplice', url: 'https://heysimplice.com' },
 }
 
@@ -86,15 +86,15 @@ export const steps = [
 ]
 
 export const about = {
-  title: 'The TripKam way',
-  text: 'TripKam brings planning, transport, stays and local guides together in one trip. Tell us how you like to travel and we build the route around you, then stay with you on the ground from arrival to departure.',
+  title: 'The ns-trip way',
+  text: 'ns-trip brings planning, transport, stays and local guides together in one trip. Tell us how you like to travel and we build the route around you, then stay with you on the ground from arrival to departure.',
   cta: 'Plan your trip',
   reel: 'Brand film',
   image: aboutKilumIjim,
 }
 
 export const why = {
-  title: 'Why travellers choose TripKam',
+  title: 'Why travellers choose ns-trip',
   text: 'A local team, built around the way you want to travel.',
   cards: [
     {
@@ -181,8 +181,8 @@ export const contact = {
     'Planning a trip to Cameroon? Tell us where you would like to go, when, and how you like to travel, and we will shape a route around you.',
     'Leave your details and a message and a member of our local team will get back to you.',
   ],
-  address: ['TripKam', 'Tours and travel', 'Cameroon'],
-  // TripKam is a demo brand, so its social links point to the site author's portfolio.
+  address: ['ns-trip', 'Tours and travel', 'Cameroon'],
+  // ns-trip is a demo brand, so its social links point to the site author's portfolio.
   socials: [
     { label: 'Instagram', href: site.author.url },
     { label: 'Facebook', href: site.author.url },
@@ -196,8 +196,8 @@ export const contact = {
     'Savanna and the north',
     'A bit of everything',
   ],
-  newsletter: 'Send me travel notes and seasonal trip ideas from TripKam.',
-  consent: 'I agree to TripKam keeping my details to reply to this request.',
+  newsletter: 'Send me travel notes and seasonal trip ideas from ns-trip.',
+  consent: 'I agree to ns-trip keeping my details to reply to this request.',
   submit: 'Send message',
   sent: {
     title: 'Thanks, your message is on its way',
@@ -268,7 +268,7 @@ export const footer = {
       ],
     },
     {
-      title: 'TripKam',
+      title: 'ns-trip',
       links: [
         { label: 'Home', href: '/' },
         { label: 'Contact', href: '/contact/' },

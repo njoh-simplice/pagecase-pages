@@ -1,13 +1,13 @@
-# TripKam
+# ns-trip
 
-> TripKam is a tours and travel site for Cameroon: guided journeys through mountains, rainforest, savanna and coast, led by local experts. It is a demo website designed and built by Njoh Simplice (https://heysimplice.com). Facts about Cameroon on the site are real; TripKam itself, its itineraries and its claims are sample content.
+> ns-trip is a tours and travel site for Cameroon: guided journeys through mountains, rainforest, savanna and coast, led by local experts. It is a demo website designed and built by Njoh Simplice (https://heysimplice.com). Facts about Cameroon on the site are real; ns-trip itself, its itineraries and its claims are sample content.
 
 Cameroon is often called "Africa in miniature" because it packs most of the continent's landscapes into one country: 10 regions from the Sahel to the Atlantic, more than 250 ethnic groups and languages, two official languages (French and English), 402 km of Atlantic coastline, and Mount Cameroon, which rises to 4,040 m.
 
 ## Pages
 
-- [Home](https://tripkam.heysimplice.com/): Destinations by landscape and region, featured experiences, sample itineraries, facts about Cameroon and travel notes.
-- [Contact](https://tripkam.heysimplice.com/contact/): Trip enquiry form (name, email, interests, travel dates, group size and message).
+- [Home](https://ns-trip.heysimplice.com/): Destinations by landscape and region, featured experiences, sample itineraries, facts about Cameroon and travel notes.
+- [Contact](https://ns-trip.heysimplice.com/contact/): Trip enquiry form (name, email, interests, travel dates, group size and message).
 
 ## Experiences
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import logo from '../../assets/images/tripkam-logo.svg'
+import logo from '../../assets/images/ns-trip-logo.svg'
 import { gsap, useGSAP } from '../../libs/gsap'
 import { getLenis } from '../../hooks/useLenis'
 import { navLinks, destinationsMenu } from '../../utils/content'
@@ -11,9 +11,9 @@ const CLOSE_DELAY = 150
 
 function Logo() {
   return (
-    <a href="/" className="flex shrink-0 items-center gap-2" aria-label="TripKam home">
+    <a href="/" className="flex shrink-0 items-center gap-2" aria-label="ns-trip home">
       <img src={logo} alt="" className="h-10 w-auto lg:h-11" />
-      <span className="text-[1.6rem] font-semibold leading-none tracking-[-0.04em]">TripKam</span>
+      <span className="text-[1.6rem] font-semibold leading-none tracking-[-0.04em]">ns-trip</span>
     </a>
   )
 }
@@ -106,7 +106,7 @@ export default function Navbar() {
       const hasIntro = !!document.querySelector('[data-preloader]')
       if (hasIntro) {
         gsap.set(bar.current, { yPercent: -125 })
-        window.addEventListener('tripkam:nav-in', slideIn, { once: true })
+        window.addEventListener('ns-trip:nav-in', slideIn, { once: true })
       }
 
       // Desktop: hide on scroll down past 80px, show on scroll up.
@@ -134,7 +134,7 @@ export default function Navbar() {
         }
       })
       return () => {
-        window.removeEventListener('tripkam:nav-in', slideIn)
+        window.removeEventListener('ns-trip:nav-in', slideIn)
         mm.revert()
       }
     },

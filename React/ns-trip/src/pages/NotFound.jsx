@@ -10,7 +10,7 @@ import { PixelCorners } from '../components/ui/Frame'
 // hosts that send every path to index.html.
 export default function NotFound() {
   useEffect(() => {
-    document.title = 'Page not found | TripKam'
+    document.title = 'Page not found | ns-trip'
     const robots = document.createElement('meta')
     robots.name = 'robots'
     robots.content = 'noindex'
@@ -35,7 +35,7 @@ export default function NotFound() {
                   The page you are looking for does not exist or has moved. Head back to the start and pick another route.
                 </p>
                 <Button href="/" size="regular" className="mt-4">
-                  Back to TripKam
+                  Back to ns-trip
                 </Button>
               </div>
             </div>

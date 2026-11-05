@@ -1,7 +1,7 @@
 {
   "id": "/",
-  "name": "TripKam",
-  "short_name": "TripKam",
+  "name": "ns-trip",
+  "short_name": "ns-trip",
   "description": "Guided journeys through mountains, rainforest, savanna and coast in Cameroon.",
   "lang": "en",
   "start_url": "/",
