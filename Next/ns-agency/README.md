@@ -64,12 +64,12 @@ The project names and team members in `lib/content.ts` are placeholders. Replace
 
 | Variable | Purpose |
 | -------- | ------- |
-| `NEXT_PUBLIC_SITE_URL` | Your production URL, for example `https://example.com`. Used for metadata and structured data. Optional. |
+| `NEXT_PUBLIC_SITE_URL` | Your production URL, for example `https://example.com`. Used for metadata, OG images and structured data. Defaults to `https://ns-agency.heysimplice.com`. |
 
 ## Project structure
 
 ```
-app/            Routes: page, layout, 404, robots and manifest
+app/            Routes: page, layout, 404, robots, manifest and OG image
 components/     Motion (Lenis and GSAP), JSON-LD and small UI pieces
 lib/            Content, structured data and text-splitting helpers
 public/         Icons, project images and llms.txt

@@ -1,8 +1,8 @@
 import { address, author, brand, members, portfolioUrl, services, tagline } from "@/lib/content";
 
-// Set NEXT_PUBLIC_SITE_URL (for example https://nsagency.com) once the domain is
-// known. Until then the url, @id and logo fields are left out instead of guessed.
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
+// Production URL, used for absolute OG/Twitter image links and structured data.
+// Set NEXT_PUBLIC_SITE_URL to deploy under another domain.
+export const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://ns-agency.heysimplice.com").replace(/\/$/, "");
 
 const founder = members[0];
 
